@@ -1,11 +1,9 @@
-import Image from 'next/image'
 import FeatureSection, { FeatureFigurePanel } from './FeatureSection'
-import FloatyBox from './FloatyBox'
 import Prose from './Prose'
 
-export default function AboutCvsHope() {
+export default function AboutCvsHope({ theme }) {
   return (
-    <FeatureSection title="What is the CVS Hope Trial?">
+    <FeatureSection title="What is the CVS Hope Trial?" theme={theme}>
       <FeatureFigurePanel left>
         <div className="aspect-w-16 aspect-h-9 bg-white rounded-lg shadow-lg overflow-hidden">
           <iframe

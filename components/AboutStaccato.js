@@ -20,11 +20,11 @@ import FeatureSection, { FeatureFigurePanel } from './FeatureSection'
 import FloatyBox from './FloatyBox'
 import Prose from './Prose'
 
-export default function AboutStaccato() {
+export default function AboutStaccato({ theme }) {
   return (
-    <FeatureSection title="What is Staccato Granisetron?">
+    <FeatureSection title="What is Staccato Granisetron?" theme={theme}>
       <div className="relative z-10">
-        <Prose className="mx-auto lg:max-w-none">
+        <Prose>
           <p>
             Granisetron is a drug that blocks the actions of chemicals in the
             body that can trigger nausea and vomiting.

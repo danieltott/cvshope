@@ -9,7 +9,7 @@ export default function FeatureSection({ title, children, theme }) {
             {title}
           </h2>
         </div>
-        <div className="splitgrid lg:items-start">{children}</div>
+        <div className="splitgrid">{children}</div>
       </div>
     </Wrap>
   )
