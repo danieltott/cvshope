@@ -5,7 +5,10 @@ import Prose from './Prose'
 
 export default function AboutCVS() {
   return (
-    <FeatureSection title="What is Cyclic Vomiting Syndrome (CVS)?" bg="dark">
+    <FeatureSection
+      title="What is Cyclic Vomiting Syndrome (CVS)?"
+      theme="dark"
+    >
       <div className="relative z-10">
         <div className="prose prose-lg prose-dark">
           <p>
