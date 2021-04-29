@@ -9,7 +9,7 @@ export default function FeatureSection({ title, children, theme }) {
             {title}
           </h2>
         </div>
-        <div className="splitgrid">{children}</div>
+        {children}
       </div>
     </Wrap>
   )
