@@ -18,22 +18,21 @@ export default function AboutCvsHope({ theme }) {
         </FeatureFigurePanel>
 
         <div className="relative z-10">
-          <Prose className="prose-lg">
+          <Prose className="prose-xl">
             <p>
               The CVS Hope trial is the first of its kind to evaluate a
               medication designed specifically to treat CVS symptoms
             </p>
-          </Prose>
-          <Prose>
-            <ul>
-              <li>
-                The CVS Hope Trial is being conducted at approximately 15 study
-                sites in the US
-              </li>
-              <li>
-                Reimbursement for travel to and from a study site is available
-              </li>
-            </ul>
+            <p>
+              The main purpose of this study is to see if Staccato granisetron
+              can help with CVS and whether Staccato granisetron is safe in
+              people who have CVS
+            </p>
+
+            <p>
+              This study will also help us determine what dose(s) of Staccato
+              granisetron might be best for CVS
+            </p>
           </Prose>
         </div>
       </div>

@@ -8,6 +8,8 @@ import CheckList from '@components/CheckList'
 import AboutCvsHope from '@components/AboutCvsHope'
 import Header from '@components/Header'
 import WhoCanJoin from '@components/WhoCanJoin'
+import FeatureSection from '@components/FeatureSection'
+import AboutStudy from '@components/AboutStudy'
 
 export default function Home() {
   return (
@@ -26,7 +28,9 @@ export default function Home() {
 
       <AboutCvsHope />
 
-      <AboutStaccato />
+      <AboutStudy />
+
+      <AboutStaccato theme="light" />
 
       <WhoCanJoin />
 
