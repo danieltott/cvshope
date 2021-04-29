@@ -4,7 +4,7 @@ export default function FloatyBox({ caption, children }) {
       {caption ? (
         <>
           <div className="rounded-t-lg px-4 py-4 ">{children}</div>
-          <div className="relative bg-indigo-600 rounded-b-lg py-5 px-6 sm:py-5 sm:px-10 text-indigo-300 font-semibold leading-6 text-center">
+          <div className="relative bg-gray-100 border-t border-gray-200 text-gray-600 rounded-b-lg py-5 px-6 sm:py-5 sm:px-10 font-light italic leading-6 text-center">
             {caption}
           </div>
         </>
