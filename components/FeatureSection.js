@@ -1,13 +1,11 @@
 import Wrap from '@components/Wrap'
-import Prose from '@components/Prose'
-import Dots from '@components/Dots'
 
-export default function FeatureSection({ title, children }) {
+export default function FeatureSection({ title, children, bg }) {
   return (
-    <Wrap>
+    <Wrap bg={bg}>
       <div className="space-y-8">
         <div className="text-base max-w-prose mx-auto lg:max-w-none text-center">
-          <h2 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-container-header sm:text-4xl">
             {title}
           </h2>
         </div>

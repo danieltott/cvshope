@@ -3,19 +3,19 @@ export default function Wrap({ children, bg, className = '' }) {
 
   switch (bg) {
     case 'blue':
-      bgClass = 'bg-gradient-to-r from-purple-800 to-indigo-700'
+      bgClass = 'container-blue'
       break
 
     case 'light':
-      bgClass = 'bg-gray-50'
+      bgClass = 'container-light'
       break
 
     case 'dark':
-      bgClass = 'bg-gray-900'
+      bgClass = 'container-dark'
       break
 
     default:
-      bgClass = 'bg-white'
+      bgClass = 'container-white'
       break
   }
 

@@ -35,4 +35,52 @@
   .subhead {
     @apply text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl;
   }
+
+  .container-white {
+    @apply bg-white text-gray-700;
+  }
+
+  .container-white .text-container-copy {
+    @apply text-gray-700;
+  }
+
+  .container-white .text-container-header {
+    @apply text-gray-900;
+  }
+
+  .container-blue {
+    @apply bg-gradient-to-r from-purple-800 to-indigo-700 text-purple-200;
+  }
+
+  .container-blue .text-container-copy {
+    @apply text-purple-200;
+  }
+
+  .container-blue .text-container-header {
+    @apply text-white;
+  }
+
+  .container-light {
+    @apply bg-gray-50 text-gray-500;
+  }
+
+  .container-light .text-container-copy {
+    @apply text-gray-500;
+  }
+
+  .container-light .text-container-header {
+    @apply text-gray-900;
+  }
+
+  .container-dark {
+    @apply bg-gray-900 text-gray-300;
+  }
+
+  .container-dark .text-container-copy {
+    @apply text-gray-300;
+  }
+
+  .container-dark .text-container-header {
+    @apply text-white;
+  }
 }

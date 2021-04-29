@@ -11,9 +11,9 @@ export default function AboutCvsHope() {
           <iframe
             src="https://www.youtube-nocookie.com/embed/gld34Aism0w"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </FeatureFigurePanel>
