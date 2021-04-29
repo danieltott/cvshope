@@ -7,17 +7,17 @@ export default function AboutCVS() {
   return (
     <FeatureSection
       title="What is Cyclic Vomiting Syndrome (CVS)?"
-      theme="dark"
+      theme="white"
     >
       <div className="relative z-10">
-        <div className="prose prose-lg prose-dark">
+        <Prose className="prose-lg">
           <p>
             Cyclic vomiting syndrome (CVS) is a chronic condition in which
             people have episodes of severe nausea and vomiting that alternate
             with periods during which they feel normal
           </p>
-        </div>
-        <div className="prose prose-dark">
+        </Prose>
+        <Prose>
           <ul>
             <li>
               CVS symptoms are often triggered by stress and frequently occur
@@ -58,14 +58,14 @@ export default function AboutCVS() {
               present between episodes)
             </li>
           </ul>
-        </div>
+        </Prose>
       </div>
       <FeatureFigurePanel>
         <FloatyBox caption="Illustration of CVS cycles">
           <Image src="/img/cvs.jpg" alt="CVS Cycle" width={468} height={238} />
         </FloatyBox>
 
-        <div className="prose mt-8 prose-dark">
+        <Prose className="mt-8">
           <h3>For more information about CVS:</h3>
           <ul>
             <li>
@@ -79,7 +79,7 @@ export default function AboutCVS() {
               </a>
             </li>
           </ul>
-        </div>
+        </Prose>
       </FeatureFigurePanel>
     </FeatureSection>
   )
