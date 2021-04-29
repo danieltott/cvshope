@@ -153,8 +153,30 @@ export default function AboutStudy({ theme }) {
             This study has 4 parts: 3 visits and 1 at home treatment period
           </h3>
         </Prose>
-        <div className="mt-10 space-y-8">
-          {transferFeatures.map((item) => (
+        <div className="mt-10 grid grid-cols-1 gap-8">
+          {transferFeatures.map((feature) => (
+            <div key={feature.name} className="pt-6">
+              <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                <div className="-mt-6">
+                  <div className="text-center">
+                    <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                      <feature.icon
+                        className="h-6 w-6 text-white"
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </div>
+                  <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                    {feature.name}
+                  </h3>
+                  <div className="mt-5 text-base text-gray-500">
+                    {feature.details}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+          {/* {transferFeatures.map((item) => (
             <div key={item.id} className="relative">
               <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
                 <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -167,7 +189,7 @@ export default function AboutStudy({ theme }) {
                 {item.details}
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </Wrap>
