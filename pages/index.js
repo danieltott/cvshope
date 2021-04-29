@@ -19,17 +19,11 @@ export default function Home() {
 
       <Header />
 
-      {/* <Wrap className="bg-gray-800"> */}
       <Hero />
-      {/* </Wrap> */}
 
-      {/* <Wrap className="bg-gray-50"> */}
-      <AboutCVS />
-      {/* </Wrap> */}
+      <AboutCVS theme="dark" />
 
-      {/* <Wrap> */}
       <AboutCvsHope />
-      {/* </Wrap> */}
 
       <AboutStaccato />
 

@@ -22,6 +22,13 @@ module.exports = {
             },
           },
         },
+        light: {
+          css: {
+            a: {
+              color: theme('colors.primary.600'),
+            },
+          },
+        },
         dark: {
           css: {
             color: theme('colors.gray.300'),
@@ -55,6 +62,42 @@ module.exports = {
             },
             h4: {
               color: theme('colors.gray.100'),
+            },
+          },
+        },
+        blue: {
+          css: {
+            color: theme('colors.purple.200'),
+            a: {
+              color: theme('colors.white'),
+            },
+            strong: {
+              color: theme('colors.white'),
+            },
+
+            'ol > li::before': {
+              color: theme('colors.gray.500'),
+            },
+            'ul > li::before': {
+              backgroundColor: theme('colors.purple.100'),
+            },
+            hr: {
+              borderColor: theme('colors.gray.800'),
+            },
+            blockquote: {
+              color: theme('colors.white'),
+            },
+            h1: {
+              color: theme('colors.white'),
+            },
+            h2: {
+              color: theme('colors.white'),
+            },
+            h3: {
+              color: theme('colors.white'),
+            },
+            h4: {
+              color: theme('colors.white'),
             },
           },
         },

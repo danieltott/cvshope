@@ -3,11 +3,11 @@ import FeatureSection, { FeatureFigurePanel } from './FeatureSection'
 import FloatyBox from './FloatyBox'
 import Prose from './Prose'
 
-export default function AboutCVS() {
+export default function AboutCVS({ theme }) {
   return (
     <FeatureSection
       title="What is Cyclic Vomiting Syndrome (CVS)?"
-      theme="white"
+      theme={theme}
     >
       <div className="relative z-10">
         <Prose className="prose-lg">
