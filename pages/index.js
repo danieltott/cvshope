@@ -6,30 +6,32 @@ import AboutStaccato from '@components/AboutStaccato'
 import Prose from '@components/Prose'
 import CheckList from '@components/CheckList'
 import AboutCvsHope from '@components/AboutCvsHope'
+import Header from '@components/Header'
 
 export default function Home() {
   return (
-    <>
+    <div class="relative">
       <Head>
         <title>CVS Hope Clinical Trial</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
 
-      <Wrap className="bg-gray-800">
-        <Hero />
-      </Wrap>
+      <Header />
 
-      <Wrap className="bg-gray-50">
-        <AboutCVS />
-      </Wrap>
+      {/* <Wrap className="bg-gray-800"> */}
+      <Hero />
+      {/* </Wrap> */}
 
-      <Wrap>
-        <AboutCvsHope />
-      </Wrap>
+      {/* <Wrap className="bg-gray-50"> */}
+      <AboutCVS />
+      {/* </Wrap> */}
 
-      <Wrap className="">
-        <AboutStaccato />
-      </Wrap>
+      {/* <Wrap> */}
+      <AboutCvsHope />
+      {/* </Wrap> */}
+
+      <AboutStaccato />
 
       <Wrap>
         <div className="space-y-8">
@@ -123,6 +125,6 @@ export default function Home() {
           </p>
         </Prose>
       </Wrap>
-    </>
+    </div>
   )
 }
