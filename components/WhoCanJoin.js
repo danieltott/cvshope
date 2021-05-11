@@ -4,7 +4,11 @@ import Prose from './Prose'
 
 export default function WhoCanJoin({ theme }) {
   return (
-    <FeatureSection title="Who can join the study?" theme={theme}>
+    <FeatureSection
+      title="Who can join the study?"
+      theme={theme}
+      id="WhoCanJoin"
+    >
       <div className="splitgrid">
         <div>
           <Prose className="prose-lg">

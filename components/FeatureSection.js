@@ -1,8 +1,8 @@
 import Wrap from '@components/Wrap'
 
-export default function FeatureSection({ title, children, theme }) {
+export default function FeatureSection({ title, children, theme, id }) {
   return (
-    <Wrap theme={theme}>
+    <Wrap theme={theme} id={id}>
       <div className="space-y-8">
         <div className="text-base max-w-prose mx-auto lg:max-w-none text-center">
           <FeatureHeader>{title}</FeatureHeader>

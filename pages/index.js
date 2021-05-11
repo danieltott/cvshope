@@ -4,11 +4,9 @@ import Wrap from '@components/Wrap'
 import AboutCVS from '@components/AboutCVS'
 import AboutStaccato from '@components/AboutStaccato'
 import Prose from '@components/Prose'
-import CheckList from '@components/CheckList'
 import AboutCvsHope from '@components/AboutCvsHope'
 import Header from '@components/Header'
 import WhoCanJoin from '@components/WhoCanJoin'
-import FeatureSection from '@components/FeatureSection'
 import AboutStudy from '@components/AboutStudy'
 
 export default function Home() {
@@ -26,11 +24,11 @@ export default function Home() {
 
       <AboutCVS theme="dark" />
 
+      <AboutStaccato theme="light" />
+
       <AboutCvsHope />
 
       <AboutStudy />
-
-      <AboutStaccato theme="light" />
 
       <WhoCanJoin />
 

@@ -27,6 +27,19 @@
   */
 @tailwind screens;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 64px;
+  }
+
+  @media (min-width: 640px) {
+    html {
+      scroll-padding-top: 72px;
+    }
+  }
+}
+
 @layer components {
   .splitgrid {
     @apply lg:grid lg:grid-cols-2 lg:gap-32 lg:items-start;

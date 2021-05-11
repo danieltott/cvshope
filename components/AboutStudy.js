@@ -144,7 +144,7 @@ const transferFeatures = [
 
 export default function AboutStudy({ theme }) {
   return (
-    <Wrap theme={theme}>
+    <Wrap theme={theme} id="AboutStudy">
       <div className="space-y-8 max-w-screen-md mx-auto">
         <FeatureHeader>What Happens During the Study?</FeatureHeader>
 

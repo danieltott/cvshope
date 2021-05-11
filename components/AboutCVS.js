@@ -8,14 +8,15 @@ export default function AboutCVS({ theme }) {
     <FeatureSection
       title="What is Cyclic Vomiting Syndrome (CVS)?"
       theme={theme}
+      id="AboutCVS"
     >
       <div className="splitgrid">
-        <div className="relative z-10">
+        <div>
           <Prose className="prose-lg">
             <p>
               Cyclic vomiting syndrome (CVS) is a chronic condition in which
               people have episodes of severe nausea and vomiting that alternate
-              with periods during which they feel normal
+              with periods during which they feel normal.
             </p>
           </Prose>
           <Prose>
