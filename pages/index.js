@@ -8,8 +8,23 @@ import AboutCvsHope from '@components/AboutCvsHope'
 import Header from '@components/Header'
 import WhoCanJoin from '@components/WhoCanJoin'
 import AboutStudy from '@components/AboutStudy'
+import Footer from '@components/Footer'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useEffect, useRef } from 'react'
 
 export default function Home() {
+  const router = useRouter()
+  const contentRef = useRef()
+  useEffect(() => {
+    // const sectionID = router?.asPath.split('#')[1]
+    // const section = document.getElementById(sectionID)
+    // console.log({ sectionID, section })
+    // if (section) {
+    //   section.focus()
+    // }
+    contentRef.current.focus()
+  }, [router?.asPath])
   return (
     <div className="relative">
       <Head>
@@ -34,19 +49,21 @@ export default function Home() {
 
       <Wrap theme="blue">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+          <h2
+            className="text-3xl font-extrabold text-white sm:text-4xl"
+            ref={contentRef}
+          >
             <span className="block">Ready to Participate in the Trial?</span>
           </h2>
           <p className="mt-4 text-lg leading-6 text-indigo-200">
             The CVS Hope Trial is being conducted at approximately 15 study
             sites in the US.
           </p>
-          <a
-            href="#"
-            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto"
-          >
-            Find a Trial Location
-          </a>
+          <Link href="/locations">
+            <a className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto">
+              Find a Trial Location
+            </a>
+          </Link>
         </div>
       </Wrap>
 
@@ -75,6 +92,7 @@ export default function Home() {
           </p>
         </Prose>
       </Wrap>
+      <Footer />
     </div>
   )
 }

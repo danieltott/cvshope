@@ -24,7 +24,7 @@ export function FeatureHeader({ children }) {
 export function FeatureFigurePanel({ children, left }) {
   return (
     <div
-      className={`mt-12 relative text-base max-w-prose  lg:mt-0 lg:max-w-none`}
+      className={`my-12 relative text-base max-w-prose  lg:mt-0 lg:max-w-none`}
     >
       {/* <Dots left={left} /> */}
       {children}

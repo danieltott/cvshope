@@ -14,6 +14,7 @@ import {
   MailIcon,
   IdentificationIcon,
 } from '@heroicons/react/outline'
+import Footer from '@components/Footer'
 
 export default function Locations({ states, data }) {
   return (
@@ -50,7 +51,7 @@ export default function Locations({ states, data }) {
         <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
           <div className="rounded-md shadow">
             <a
-              href="#"
+              href="#locations"
               className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md btn-primary-bg md:py-4 md:text-lg md:px-10"
             >
               Find a Trial Location
@@ -67,7 +68,7 @@ export default function Locations({ states, data }) {
         </div>
       </div>
 
-      <Wrap theme="light">
+      <Wrap theme="light" id="locations">
         <div className="divide-y-2 divide-blue-gray-200">
           {states.map((state) => (
             <div className="py-12 lg:grid lg:grid-cols-3 lg:gap-8">
@@ -135,6 +136,7 @@ export default function Locations({ states, data }) {
           ))}
         </div>
       </Wrap>
+      <Footer />
     </div>
   )
 }

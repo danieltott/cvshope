@@ -1,4 +1,5 @@
 import { ArrowNarrowDownIcon } from '@heroicons/react/solid'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -23,12 +24,11 @@ export default function Hero() {
           </p>
           <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
             <div className="rounded-md shadow">
-              <a
-                href="#"
-                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md btn-primary-bg md:py-4 md:text-lg md:px-10"
-              >
-                Find a Trial Location
-              </a>
+              <Link href="/locations">
+                <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md btn-primary-bg md:py-4 md:text-lg md:px-10">
+                  Find a Trial Location
+                </a>
+              </Link>
             </div>
             <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
               <a
