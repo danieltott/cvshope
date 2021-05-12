@@ -11,7 +11,7 @@ import AboutStudy from '@components/AboutStudy'
 
 export default function Home() {
   return (
-    <div class="relative">
+    <div className="relative">
       <Head>
         <title>CVS Hope Clinical Trial</title>
         <link rel="icon" href="/favicon.ico" />

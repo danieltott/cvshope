@@ -12,7 +12,9 @@ module.exports = {
       },
       colors: {
         orange: colors.orange,
-        primary: colors.blue,
+        fuchsia: colors.fuchsia,
+        primary: colors.indigo,
+        rose: colors.rose,
       },
       typography: (theme) => ({
         DEFAULT: {

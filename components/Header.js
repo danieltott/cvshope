@@ -59,13 +59,13 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
                 <div className="flex justify-start lg:w-0 lg:flex-1">
-                  <a href="#">
-                    <span className="sr-only">Alexca Pharmaceuticals</span>
-                    <img
-                      className="h-8 w-auto sm:h-10"
-                      src="/img/alexza_logo.svg"
-                      alt=""
-                    />
+                  <a href="/" className="tracking-tight  text-gray-800">
+                    <span className="font-extrabold text-2xl">
+                      CVS{' '}
+                      <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500  ">
+                        Hope
+                      </span>
+                    </span>
                   </a>
                 </div>
                 <div className="-mr-2 -my-2 md:hidden">
@@ -136,7 +136,7 @@ export default function Header() {
                                 ))}
                               </div>
                               <a
-                                href="#"
+                                href="/locations"
                                 className="px-5 py-5 bg-indigo-600 text-white space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8 hover:bg-indigo-700"
                               >
                                 <span className="-m-3 p-3 flex items-center rounded-md text-base font-medium">
@@ -157,8 +157,8 @@ export default function Header() {
                   </Popover>
 
                   <a
-                    href="#"
-                    className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                    href="/locations"
+                    className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium btn-primary-bg"
                   >
                     Find a Trial Location
                   </a>
@@ -221,7 +221,7 @@ export default function Header() {
                   <div className="py-6 px-5 space-y-6">
                     <div>
                       <a
-                        href="#"
+                        href="/locations"
                         className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                       >
                         Find a Trial Location

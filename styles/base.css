@@ -41,6 +41,10 @@
 }
 
 @layer components {
+  .btn-primary-bg {
+    @apply text-white bg-indigo-600 hover:bg-indigo-700;
+  }
+
   .splitgrid {
     @apply lg:grid lg:grid-cols-2 lg:gap-32 lg:items-start;
   }
