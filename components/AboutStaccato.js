@@ -39,7 +39,7 @@ export default function AboutStaccato({ theme }) {
         </Prose>
 
         <FeatureFigurePanel>
-          <FloatyBox caption="Rapid vaporization = Rapid absorption = Rapid onset of action">
+          <FloatyBox caption="Rapid vaporization + Rapid absorption = Rapid onset of action">
             <Image
               src="/img/staccato-device.jpg"
               alt="staccato device"
