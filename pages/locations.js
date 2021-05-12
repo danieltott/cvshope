@@ -1,19 +1,8 @@
 import Head from 'next/head'
-import Hero from '@components/Hero'
+import Link from 'next/link'
 import Wrap from '@components/Wrap'
-import AboutCVS from '@components/AboutCVS'
-import AboutStaccato from '@components/AboutStaccato'
-import Prose from '@components/Prose'
-import AboutCvsHope from '@components/AboutCvsHope'
 import Header from '@components/Header'
-import WhoCanJoin from '@components/WhoCanJoin'
-import AboutStudy from '@components/AboutStudy'
-import { LocationModalButton } from '@components/LocationModal'
-import {
-  PhoneIcon,
-  MailIcon,
-  IdentificationIcon,
-} from '@heroicons/react/outline'
+import { PhoneIcon, MailIcon } from '@heroicons/react/outline'
 import Footer from '@components/Footer'
 
 export default function Locations({ states, data }) {
