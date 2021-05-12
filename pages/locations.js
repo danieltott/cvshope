@@ -50,20 +50,18 @@ export default function Locations({ states, data }) {
         </p>
         <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
           <div className="rounded-md shadow">
-            <a
-              href="#locations"
-              className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md btn-primary-bg md:py-4 md:text-lg md:px-10"
-            >
-              Find a Trial Location
-            </a>
+            <Link href="#locations">
+              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md btn-primary-bg md:py-4 md:text-lg md:px-10">
+                Find a Trial Location
+              </a>
+            </Link>
           </div>
           <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-            <a
-              href="/"
-              className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
-            >
-              Learn More
-            </a>
+            <Link href="/">
+              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                Learn More
+              </a>
+            </Link>
           </div>
         </div>
       </div>
