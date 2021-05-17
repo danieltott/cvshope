@@ -4,8 +4,16 @@ import Wrap from '@components/Wrap'
 import Header from '@components/Header'
 import { PhoneIcon, MailIcon } from '@heroicons/react/outline'
 import Footer from '@components/Footer'
+import LocationsMap from '@components/LocationsMap'
+import zipCodeDict from '../data/zipcode-dict.json'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
-export default function Locations({ states, data }) {
+export default function Locations({
+  states,
+  data,
+  mapLocations,
+  mapCornersLngLat,
+}) {
   return (
     <div className="relative">
       <Head>
@@ -16,7 +24,7 @@ export default function Locations({ states, data }) {
 
       <Header />
 
-      <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
+      <div className="mx-auto max-w-7xl w-full pt-16 text-center lg:pt-48 lg:text-left">
         <h1 className=" tracking-tight font-extrabold text-gray-800">
           <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-8xl">
             CVS{' '}
@@ -30,44 +38,43 @@ export default function Locations({ states, data }) {
         </h1>
 
         <p className="mt-3 text-lg text-gray-500 sm:text-xl md:mt-5">
-          The CVS Hope Trial is being conducted at approximately 15 study sites
-          in the US.
+          The CVS Hope Trial is being conducted at approximately{' '}
+          {mapLocations.length} study sites in the US.
         </p>
         <p className="mt-3 text-lg text-gray-500 sm:text-xl md:mt-5">
           To learn more about the CVS Hope clinical trial, contact one of the
           locations listed below:
         </p>
-        <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
-          <div className="rounded-md shadow">
-            <Link href="#locations">
-              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md btn-primary-bg md:py-4 md:text-lg md:px-10">
-                Find a Trial Location
-              </a>
-            </Link>
-          </div>
-          <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-            <Link href="/">
-              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
-                Learn More
-              </a>
-            </Link>
-          </div>
-        </div>
+      </div>
+
+      <div id="map" className="pt-24">
+        <LocationsMap
+          mapLocations={mapLocations}
+          mapCornersLngLat={mapCornersLngLat}
+        />
       </div>
 
       <Wrap theme="light" id="locations">
         <div className="divide-y-2 divide-blue-gray-200">
           {states.map((state) => (
-            <div className="py-12 lg:grid lg:grid-cols-3 lg:gap-8">
+            <div
+              className="py-12 lg:grid lg:grid-cols-3 lg:gap-8"
+              key={state}
+              id={state}
+            >
               <h2 className="text-3xl leading-8 font-extrabold tracking-tight text-container-header sm:text-4xl">
                 {state}
               </h2>
               <div className="mt-12 lg:mt-0 lg:col-span-2">
-                <dl className="space-y-12">
-                  {data[state].locations.map((loc) => {
+                <dl className="space-y-6">
+                  {data[state].locations.map((loc, i) => {
                     const contact = loc.LocationContactList.LocationContact[0]
                     return (
-                      <div key={loc.LocationFacility}>
+                      <div
+                        key={loc.LocationFacility}
+                        id={loc.LocationZip}
+                        className="pt-6"
+                      >
                         <dt className="text-lg leading-6 font-medium text-gray-900">
                           {loc.LocationCity}: {loc.LocationFacility}
                         </dt>
@@ -76,48 +83,60 @@ export default function Locations({ states, data }) {
                             {loc.LocationCity}, {loc.LocationState},{' '}
                             {loc.LocationCountry}, {loc.LocationZip}
                           </div>
+                          {loc.LocationStatus === 'Recruiting' ? (
+                            <div className="mt-2">
+                              <div className="text-base">
+                                <p>Contact: {contact.LocationContactName}</p>
+                              </div>
 
-                          <div className="mt-2">
-                            <div className="text-base">
-                              <p>Contact: {contact.LocationContactName}</p>
-                            </div>
-
-                            <div className="mt-3 flex">
-                              <div className="flex-shrink-0">
-                                <PhoneIcon
-                                  className="h-6 w-6 text-gray-400"
-                                  aria-hidden="true"
-                                />
+                              <div className="mt-3 flex">
+                                <div className="flex-shrink-0">
+                                  <PhoneIcon
+                                    className="h-6 w-6 text-gray-400"
+                                    aria-hidden="true"
+                                  />
+                                </div>
+                                <div className="ml-3 text-base">
+                                  <p>
+                                    {contact.LocationContactPhone}{' '}
+                                    {contact.LocationContactPhoneExt &&
+                                      ` ext ${contact.LocationContactPhoneExt}`}
+                                  </p>
+                                </div>
                               </div>
-                              <div className="ml-3 text-base">
-                                <p>
-                                  {contact.LocationContactPhone}{' '}
-                                  {contact.LocationContactPhoneExt &&
-                                    ` ext ${contact.LocationContactPhoneExt}`}
-                                </p>
-                              </div>
-                            </div>
-                            <div className="mt-3 flex">
-                              <div className="flex-shrink-0">
-                                <MailIcon
-                                  className="h-6 w-6 text-gray-400"
-                                  aria-hidden="true"
-                                />
-                              </div>
-                              <div className="ml-3 text-base">
-                                <p>
-                                  <a href="mailto:{contact.LocationContactEMail}">
-                                    {contact.LocationContactEMail}
-                                  </a>
-                                </p>
+                              <div className="mt-3 flex">
+                                <div className="flex-shrink-0">
+                                  <MailIcon
+                                    className="h-6 w-6 text-gray-400"
+                                    aria-hidden="true"
+                                  />
+                                </div>
+                                <div className="ml-3 text-base">
+                                  <p>
+                                    <a
+                                      href={`mailto:${contact.LocationContactEMail}`}
+                                    >
+                                      {contact.LocationContactEMail}
+                                    </a>
+                                  </p>
+                                </div>
                               </div>
                             </div>
-                          </div>
+                          ) : (
+                            <div className="mt-2 italic">
+                              Not yet recruiting - check back soon!
+                            </div>
+                          )}
                         </dd>
                       </div>
                     )
                   })}
                 </dl>
+              </div>
+              <div className="mt-12">
+                <Link href="#map">
+                  <a className="text-indigo-600">Back to Map</a>
+                </Link>
               </div>
             </div>
           ))}
@@ -127,6 +146,8 @@ export default function Locations({ states, data }) {
     </div>
   )
 }
+
+const applyToArray = (func, array) => func.apply(Math, array)
 
 export async function getStaticProps() {
   const res = await fetch(
@@ -140,8 +161,20 @@ export async function getStaticProps() {
 
   const states = []
   const data = {}
+  const mapLocations = []
+  const latitudes = []
+  const longitudes = []
 
   locations.forEach((loc) => {
+    const geo = zipCodeDict[loc.LocationZip]
+
+    mapLocations.push({
+      ...loc,
+      geo,
+    })
+    latitudes.push(geo[0])
+    longitudes.push(geo[1])
+
     if (states.indexOf(loc.LocationState) === -1) {
       states.push(loc.LocationState)
       data[loc.LocationState] = {
@@ -152,6 +185,12 @@ export async function getStaticProps() {
       data[loc.LocationState].locations.push(loc)
     }
   })
+
+  // getBounds taken from: https://github.com/visgl/react-map-gl/issues/1246#issuecomment-738032023
+  const cornersLngLat = [
+    [applyToArray(Math.min, longitudes), applyToArray(Math.min, latitudes)],
+    [applyToArray(Math.max, longitudes), applyToArray(Math.max, latitudes)],
+  ]
 
   states.sort()
 
@@ -175,10 +214,12 @@ export async function getStaticProps() {
     props: {
       states,
       data,
+      mapLocations,
+      mapCornersLngLat: cornersLngLat,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every second
-    revalidate: 1, // In seconds
+    revalidate: 60 * 60 * 6, // In seconds
   }
 }
