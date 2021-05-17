@@ -193,11 +193,16 @@ export default function Header() {
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
                       <div>
-                        <img
-                          className="h-8 w-auto"
-                          src="/img/alexza_logo.svg"
-                          alt="Alexca Pharmaceuticals"
-                        />
+                        <Link href="/">
+                          <a className="tracking-tight  text-gray-800">
+                            <span className="font-extrabold text-2xl">
+                              CVS{' '}
+                              <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500  ">
+                                Hope
+                              </span>
+                            </span>
+                          </a>
+                        </Link>
                       </div>
                       <div className="-mr-2">
                         <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
