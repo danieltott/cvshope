@@ -61,9 +61,9 @@ const transferFeatures = [
           </li>
 
           <li>
-            You will be shown how to use the Staccato device and you will take
-            one dose at the clinic. For the next two hours, we will do heart
-            tests and ask you how you feel
+            You will be shown how to use the <em>Staccato</em> device and you
+            will take one dose at the clinic. For the next two hours, we will do
+            heart tests and ask you how you feel
           </li>
 
           <li>

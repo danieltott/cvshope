@@ -22,7 +22,11 @@ const features = [
     icon: QuestionMarkCircleIcon,
   },
   {
-    name: 'What is Staccato Granisetron?',
+    name: (
+      <>
+        What is <em>Staccato</em> Granisetron?
+      </>
+    ),
     href: 'AboutStaccato',
     description: 'Learn about the medication being tested in this trial.',
     icon: StatusOnlineIcon,

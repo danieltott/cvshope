@@ -12,7 +12,11 @@ const navigation = {
       href: 'https://www.alexza.com/',
     },
     {
-      name: 'Staccato OBT',
+      name: (
+        <>
+          <em>Staccato</em> OBT™
+        </>
+      ),
       href: 'http://staccatoobt.com/',
     },
   ],

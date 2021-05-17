@@ -81,11 +81,11 @@ export default function Home() {
           <p>
             Alexza has developed the{' '}
             <a href="http://staccatoobt.com/">
-              Staccato One Breath Technology (OBT)
-            </a>
-            system, which is a hand-held inhaler designed to deliver a pure drug
-            aerosol to the deep lung, providing rapid systemic delivery and
-            therapeutic onset, in a simple, non-invasive manner.
+              <em>Staccato</em> One Breath Technology™
+            </a>{' '}
+            (OBT™) system, which is a hand-held inhaler designed to deliver a
+            pure drug aerosol to the deep lung, providing rapid systemic
+            delivery and therapeutic onset, in a simple, non-invasive manner.
           </p>
         </Prose>
       </Wrap>

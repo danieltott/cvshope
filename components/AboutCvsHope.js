@@ -27,14 +27,14 @@ export default function AboutCvsHope({ theme }) {
             designed specifically to treat CVS symptoms
           </p>
           <p>
-            The main purpose of this study is to see if Staccato granisetron can
-            help with CVS and whether Staccato granisetron is safe in people who
-            have CVS
+            The main purpose of this study is to see if <em>Staccato</em>{' '}
+            granisetron can help with CVS and whether <em>Staccato</em>{' '}
+            granisetron is safe in people who have CVS
           </p>
 
           <p>
-            This study will also help us determine what dose(s) of Staccato
-            granisetron might be best for CVS
+            This study will also help us determine what dose(s) of{' '}
+            <em>Staccato</em> granisetron might be best for CVS
           </p>
         </Prose>
       </div>
