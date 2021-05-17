@@ -41,10 +41,10 @@ export default function AboutStaccato({ theme }) {
         <FeatureFigurePanel>
           <FloatyBox caption="Rapid vaporization + Rapid absorption = Rapid onset of action">
             <Image
-              src="/img/staccato-device.jpg"
+              src="/img/staccato-device.png"
               alt="staccato device"
-              width={585}
-              height={292}
+              width={2717}
+              height={1563}
             />
           </FloatyBox>
         </FeatureFigurePanel>
