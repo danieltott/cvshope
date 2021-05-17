@@ -65,12 +65,21 @@ export default function AboutCVS({ theme }) {
           </Prose>
         </div>
         <FeatureFigurePanel>
-          <FloatyBox caption="Illustration of CVS cycles">
+          <FloatyBox
+            caption={
+              <>
+                <div>Illustration of CVS phases</div>
+                <div class="text-sm">
+                  Fleisher et al. (2005) <em>BMC Medicine</em>
+                </div>
+              </>
+            }
+          >
             <Image
-              src="/img/cvs.jpg"
+              src="/img/cvs-phases.png"
               alt="CVS Cycle"
-              width={468}
-              height={238}
+              width={1331}
+              height={684}
             />
           </FloatyBox>
 
@@ -86,6 +95,15 @@ export default function AboutCVS({ theme }) {
                 <a href="https://www.iffgd.org/upper-gi-disorders/cyclic-vomiting-syndrome-cvs.html">
                   International Foundation for Gastrointestinal Disorders
                 </a>
+              </li>
+              <li>
+                <a href="https://www.niddk.nih.gov/health-information/digestive-diseases/cyclic-vomiting-syndrome">
+                  Cyclic Vomiting Syndrome Resources
+                </a>{' '}
+                from the{' '}
+                <abbr title="National Institute of Diabetes and Digestive and Kidney Diseases">
+                  NIDDK
+                </abbr>
               </li>
             </ul>
           </Prose>
