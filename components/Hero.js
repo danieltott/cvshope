@@ -19,8 +19,9 @@ export default function Hero() {
           </h1>
 
           <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-            The CVS Hope trial is the first of its kind to evaluate a medication
-            designed specifically to treat Cyclic Vomiting Syndrome symptoms
+            The CVS Hope trial is the first of its kind to evaluate an
+            investigational medication designed specifically to treat Cyclic
+            Vomiting Syndrome
           </p>
           <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
             <div className="rounded-md shadow">

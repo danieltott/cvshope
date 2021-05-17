@@ -43,9 +43,9 @@ export default function Footer() {
               </a>
             </Link>
             <p className="text-gray-500 text-base">
-              The CVS Hope trial is the first of its kind to evaluate a
-              medication designed specifically to treat Cyclic Vomiting Syndrome
-              symptoms.
+              The CVS Hope trial is the first of its kind to evaluate an
+              investigational medication designed specifically to treat Cyclic
+              Vomiting Syndrome
             </p>
           </div>
           <div className="mt-12 flex text-right xl:mt-0 xl:col-span-2 justify-end">
