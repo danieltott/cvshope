@@ -85,10 +85,7 @@ export default function Home() {
             </a>
             system, which is a hand-held inhaler designed to deliver a pure drug
             aerosol to the deep lung, providing rapid systemic delivery and
-            therapeutic onset, in a simple, non-invasive manner. For CVS, this
-            drug delivery technology has the advantages of bypassing the GI
-            system and resulting in rapid drug delivery for a fast onset of
-            effect and potential relief of CVS symptoms.
+            therapeutic onset, in a simple, non-invasive manner.
           </p>
         </Prose>
       </Wrap>

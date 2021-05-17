@@ -88,8 +88,10 @@ const transferFeatures = [
         </p>
 
         <p>
-          After we know that your heart tests from Visit 2 look good, we will
-          send you your study medication
+          After we know that your ECG (a test that measures and records the
+          electrical activity of your heart) results from Visit 2 look good, you
+          will be provided with the study medication for the Home Treatment
+          Period.
         </p>
 
         <p>
