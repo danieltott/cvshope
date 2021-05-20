@@ -24,15 +24,15 @@ export default function Locations({
 
       <Header />
 
-      <div className="mx-auto max-w-7xl w-full pt-16 text-center lg:pt-48 lg:text-left">
+      <div className="mx-auto max-w-7xl w-full pt-16 lg:pt-48 px-4 sm:px-6">
         <h1 className=" tracking-tight font-extrabold text-gray-800">
-          <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-8xl">
+          <span className="block text-6xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-8xl">
             CVS{' '}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500  ">
               Hope
             </span>
           </span>
-          <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-4xl">
+          <span className="block text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl">
             Clinical Trial Locations
           </span>
         </h1>
