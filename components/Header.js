@@ -149,7 +149,7 @@ export default function Header() {
                                   </Link>
                                 ))}
                               </div>
-                              <Link href="/locations">
+                              <Link href="/locations#top">
                                 <a className="px-5 py-5 bg-indigo-600 text-white space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8 hover:bg-indigo-700">
                                   <span className="-m-3 p-3 flex items-center rounded-md text-base font-medium">
                                     <LocationMarkerIcon
@@ -169,7 +169,7 @@ export default function Header() {
                     )}
                   </Popover>
 
-                  <Link href="/locations">
+                  <Link href="/locations#top">
                     <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium btn-primary-bg">
                       Find a Trial Location
                     </a>
@@ -242,7 +242,7 @@ export default function Header() {
                   </div>
                   <div className="py-6 px-5 space-y-6">
                     <div>
-                      <Link href="/locations">
+                      <Link href="/locations#top">
                         <a className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
                           Find a Trial Location
                         </a>

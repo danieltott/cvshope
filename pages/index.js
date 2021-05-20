@@ -59,7 +59,7 @@ export default function Home() {
             The CVS Hope Trial is being conducted at approximately 15 study
             sites in the US.
           </p>
-          <Link href="/locations">
+          <Link href="/locations#top">
             <a className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto">
               Find a Trial Location
             </a>
