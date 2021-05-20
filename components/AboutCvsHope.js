@@ -12,7 +12,7 @@ export default function AboutCvsHope({ theme }) {
         <FeatureFigurePanel left>
           <div className="aspect-w-16 aspect-h-9 bg-white rounded-lg shadow-lg overflow-hidden">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/gld34Aism0w"
+              src="https://www.youtube-nocookie.com/embed/UeDFhQXqQEE"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
