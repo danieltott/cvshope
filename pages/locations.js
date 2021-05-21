@@ -38,8 +38,8 @@ export default function Locations({
         </h1>
 
         <p className="mt-3 text-lg text-gray-500 sm:text-xl md:mt-5">
-          The CVS Hope Trial is being conducted at approximately{' '}
-          {mapLocations.length} study sites in the US.
+          The CVS Hope Trial is being conducted at approximately 15 study sites
+          in the US.
         </p>
         <p className="mt-3 text-lg text-gray-500 sm:text-xl md:mt-5">
           To learn more about the CVS Hope clinical trial, contact one of the
