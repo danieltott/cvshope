@@ -80,7 +80,7 @@ export default function AboutCVS({ theme }) {
               alt="CVS Cycle"
               width={1331}
               height={684}
-              layout="responsive"
+              sizes="(min-width: 1200px) 520px, (min-width: 700px) 618px, 100vw"
             />
           </FloatyBox>
 

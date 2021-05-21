@@ -45,9 +45,9 @@ export default function AboutStaccato({ theme }) {
             <Image
               src="/img/staccato-device.png"
               alt="staccato device"
-              layout="responsive"
               width={2717}
               height={1563}
+              sizes="(min-width: 1200px) 520px, (min-width: 700px) 618px, 100vw"
             />
           </FloatyBox>
         </FeatureFigurePanel>
