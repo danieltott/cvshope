@@ -7,6 +7,7 @@ import Footer from '@components/Footer'
 import LocationsMap from '@components/LocationsMap'
 import zipCodeDict from '../data/zipcode-dict.json'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import { NextSeo } from 'next-seo'
 
 export default function Locations({
   states,
