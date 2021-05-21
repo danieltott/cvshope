@@ -8,6 +8,7 @@ import MapGL, {
 import { PhoneIcon, MailIcon, XIcon } from '@heroicons/react/outline'
 import { LocationMarkerIcon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
+import * as gtag from 'util/gtag'
 
 const SIZE = 24
 
@@ -157,6 +158,11 @@ export default function LocationsMap({
   const [popupInfo, setPopupInfo] = useState(null)
   const onClick = useCallback(
     (location) => {
+      gtag.event({
+        action: 'click_map_state',
+        category: 'Locations',
+        label: location.LocationState,
+      })
       push(`#${location.LocationState}`)
     },
     [push]
