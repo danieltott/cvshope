@@ -21,15 +21,15 @@ function Application({ Component, pageProps }) {
       <DefaultSeo
         title="CVS Hope Clinical Trial"
         description="The CVS Hope trial is the first of its kind to evaluate an investigational medication designed specifically to treat Cyclic Vomiting Syndrome"
-        canonical={process.env.URL}
+        canonical={process.env.NEXT_PUBLIC_IMG_URL}
         openGraph={{
-          url: process.env.URL,
+          url: process.env.NEXT_PUBLIC_IMG_URL,
           title: 'CVS Hope Clinical Trial',
           description:
             'The CVS Hope trial is the first of its kind to evaluate an investigational medication designed specifically to treat Cyclic Vomiting Syndrome',
           images: [
             {
-              url: `${process.env.URL}/img/hero-card.jpg`,
+              url: `${process.env.NEXT_PUBLIC_IMG_URL}/img/hero-card.jpg`,
               width: 800,
               height: 600,
               alt: 'Og Image Alt',

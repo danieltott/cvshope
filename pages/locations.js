@@ -20,9 +20,9 @@ export default function Locations({
       <NextSeo
         title="CVS Hope Clinical Trial Locations"
         description="The CVS Hope Trial is being conducted at approximately 15 study sites in the US."
-        canonical={`${process.env.URL}/locations`}
+        canonical={`${process.env.NEXT_PUBLIC_IMG_URL}/locations`}
         openGraph={{
-          url: `${process.env.URL}/locations`,
+          url: `${process.env.NEXT_PUBLIC_IMG_URL}/locations`,
           title: 'CVS Hope Clinical Trial Locations',
           description:
             'The CVS Hope Trial is being conducted at approximately 15 study sites in the US.',
