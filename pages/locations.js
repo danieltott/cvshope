@@ -15,133 +15,142 @@ export default function Locations({
   mapCornersLngLat,
 }) {
   return (
-    <div className="relative">
-      <Head>
-        <title>CVS Hope Clinical Trial Locations</title>
-      </Head>
+    <>
+      <NextSeo
+        title="CVS Hope Clinical Trial Locations"
+        description="The CVS Hope Trial is being conducted at approximately 15 study sites in the US."
+        canonical={`${process.env.URL}/locations`}
+        openGraph={{
+          url: `${process.env.URL}/locations`,
+          title: 'CVS Hope Clinical Trial Locations',
+          description:
+            'The CVS Hope Trial is being conducted at approximately 15 study sites in the US.',
+        }}
+      />
+      <div className="relative">
+        <Header />
 
-      <Header />
-
-      <div className="mx-auto max-w-7xl w-full pt-16 lg:pt-48 px-4 sm:px-6">
-        <h1 className=" tracking-tight font-extrabold text-gray-800">
-          <span className="block text-6xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-8xl">
-            CVS{' '}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500  ">
-              Hope
+        <div className="mx-auto max-w-7xl w-full pt-16 lg:pt-48 px-4 sm:px-6">
+          <h1 className=" tracking-tight font-extrabold text-gray-800">
+            <span className="block text-6xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-8xl">
+              CVS{' '}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500  ">
+                Hope
+              </span>
             </span>
-          </span>
-          <span className="block text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl">
-            Clinical Trial Locations
-          </span>
-        </h1>
+            <span className="block text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl">
+              Clinical Trial Locations
+            </span>
+          </h1>
 
-        <p className="mt-3 text-lg text-gray-500 sm:text-xl md:mt-5">
-          The CVS Hope Trial is being conducted at approximately 15 study sites
-          in the US.
-        </p>
-        <p className="mt-3 text-lg text-gray-500 sm:text-xl md:mt-5">
-          To learn more about the CVS Hope clinical trial, contact one of the
-          locations listed below:
-        </p>
-      </div>
-
-      <div id="map" className="pt-24">
-        <LocationsMap
-          mapLocations={mapLocations}
-          mapCornersLngLat={mapCornersLngLat}
-        />
-      </div>
-
-      <Wrap theme="light" id="locations">
-        <div className="divide-y-2 divide-blue-gray-200">
-          {states.map((state) => (
-            <div
-              className="py-12 lg:grid lg:grid-cols-3 lg:gap-8"
-              key={state}
-              id={state}
-            >
-              <h2 className="text-3xl leading-8 font-extrabold tracking-tight text-container-header sm:text-4xl">
-                {state}
-              </h2>
-              <div className="mt-12 lg:mt-0 lg:col-span-2">
-                <dl className="space-y-6">
-                  {data[state].locations.map((loc, i) => {
-                    const contact = loc.LocationContactList.LocationContact[0]
-                    return (
-                      <div
-                        key={loc.LocationFacility}
-                        id={loc.LocationZip}
-                        className="pt-6"
-                      >
-                        <dt className="text-lg leading-6 font-medium text-gray-900">
-                          {loc.LocationCity}: {loc.LocationFacility}
-                        </dt>
-                        <dd className="text-base text-gray-600">
-                          <div className="mt-2">
-                            {loc.LocationCity}, {loc.LocationState},{' '}
-                            {loc.LocationCountry}, {loc.LocationZip}
-                          </div>
-                          {loc.LocationStatus === 'Recruiting' ? (
-                            <div className="mt-2">
-                              <div className="text-base">
-                                <p>Contact: {contact.LocationContactName}</p>
-                              </div>
-
-                              <div className="mt-3 flex">
-                                <div className="flex-shrink-0">
-                                  <PhoneIcon
-                                    className="h-6 w-6 text-gray-400"
-                                    aria-hidden="true"
-                                  />
-                                </div>
-                                <div className="ml-3 text-base">
-                                  <p>
-                                    {contact.LocationContactPhone}{' '}
-                                    {contact.LocationContactPhoneExt &&
-                                      ` ext ${contact.LocationContactPhoneExt}`}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="mt-3 flex">
-                                <div className="flex-shrink-0">
-                                  <MailIcon
-                                    className="h-6 w-6 text-gray-400"
-                                    aria-hidden="true"
-                                  />
-                                </div>
-                                <div className="ml-3 text-base">
-                                  <p>
-                                    <a
-                                      href={`mailto:${contact.LocationContactEMail}`}
-                                    >
-                                      {contact.LocationContactEMail}
-                                    </a>
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          ) : (
-                            <div className="mt-2 italic">
-                              Not yet recruiting - check back soon!
-                            </div>
-                          )}
-                        </dd>
-                      </div>
-                    )
-                  })}
-                </dl>
-              </div>
-              <div className="mt-12">
-                <Link href="#map">
-                  <a className="text-indigo-600">Back to Map</a>
-                </Link>
-              </div>
-            </div>
-          ))}
+          <p className="mt-3 text-lg text-gray-500 sm:text-xl md:mt-5">
+            The CVS Hope Trial is being conducted at approximately 15 study
+            sites in the US.
+          </p>
+          <p className="mt-3 text-lg text-gray-500 sm:text-xl md:mt-5">
+            To learn more about the CVS Hope clinical trial, contact one of the
+            locations listed below:
+          </p>
         </div>
-      </Wrap>
-      <Footer />
-    </div>
+
+        <div id="map" className="pt-24">
+          <LocationsMap
+            mapLocations={mapLocations}
+            mapCornersLngLat={mapCornersLngLat}
+          />
+        </div>
+
+        <Wrap theme="light" id="locations">
+          <div className="divide-y-2 divide-blue-gray-200">
+            {states.map((state) => (
+              <div
+                className="py-12 lg:grid lg:grid-cols-3 lg:gap-8"
+                key={state}
+                id={state}
+              >
+                <h2 className="text-3xl leading-8 font-extrabold tracking-tight text-container-header sm:text-4xl">
+                  {state}
+                </h2>
+                <div className="mt-12 lg:mt-0 lg:col-span-2">
+                  <dl className="space-y-6">
+                    {data[state].locations.map((loc, i) => {
+                      const contact = loc.LocationContactList.LocationContact[0]
+                      return (
+                        <div
+                          key={loc.LocationFacility}
+                          id={loc.LocationZip}
+                          className="pt-6"
+                        >
+                          <dt className="text-lg leading-6 font-medium text-gray-900">
+                            {loc.LocationCity}: {loc.LocationFacility}
+                          </dt>
+                          <dd className="text-base text-gray-600">
+                            <div className="mt-2">
+                              {loc.LocationCity}, {loc.LocationState},{' '}
+                              {loc.LocationCountry}, {loc.LocationZip}
+                            </div>
+                            {loc.LocationStatus === 'Recruiting' ? (
+                              <div className="mt-2">
+                                <div className="text-base">
+                                  <p>Contact: {contact.LocationContactName}</p>
+                                </div>
+
+                                <div className="mt-3 flex">
+                                  <div className="flex-shrink-0">
+                                    <PhoneIcon
+                                      className="h-6 w-6 text-gray-400"
+                                      aria-hidden="true"
+                                    />
+                                  </div>
+                                  <div className="ml-3 text-base">
+                                    <p>
+                                      {contact.LocationContactPhone}{' '}
+                                      {contact.LocationContactPhoneExt &&
+                                        ` ext ${contact.LocationContactPhoneExt}`}
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="mt-3 flex">
+                                  <div className="flex-shrink-0">
+                                    <MailIcon
+                                      className="h-6 w-6 text-gray-400"
+                                      aria-hidden="true"
+                                    />
+                                  </div>
+                                  <div className="ml-3 text-base">
+                                    <p>
+                                      <a
+                                        href={`mailto:${contact.LocationContactEMail}`}
+                                      >
+                                        {contact.LocationContactEMail}
+                                      </a>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            ) : (
+                              <div className="mt-2 italic">
+                                Not yet recruiting - check back soon!
+                              </div>
+                            )}
+                          </dd>
+                        </div>
+                      )
+                    })}
+                  </dl>
+                </div>
+                <div className="mt-12">
+                  <Link href="#map">
+                    <a className="text-indigo-600">Back to Map</a>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Wrap>
+        <Footer />
+      </div>
+    </>
   )
 }
 
