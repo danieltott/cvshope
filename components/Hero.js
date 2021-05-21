@@ -1,5 +1,6 @@
 import { ArrowNarrowDownIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -43,9 +44,14 @@ export default function Hero() {
         </div>
       </div>
       <div className="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-        <img
-          className="absolute inset-0 w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1505027492977-1037f14c46fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80"
+        <Image
+          className="absolute inset-0 w-full h-full"
+          objectFit="cover"
+          objectPosition="50% 82%"
+          layout="fill"
+          src="/img/hero.jpg"
+          // width={2073}
+          // height={1809}
           alt=""
         />
       </div>
