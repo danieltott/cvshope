@@ -69,7 +69,7 @@ export default function AboutCVS({ theme }) {
             caption={
               <>
                 <div>Illustration of CVS phases</div>
-                <div class="text-sm">
+                <div className="text-sm">
                   Fleisher et al. (2005) <em>BMC Medicine</em>
                 </div>
               </>
