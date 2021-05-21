@@ -29,7 +29,7 @@ function Application({ Component, pageProps }) {
             'The CVS Hope trial is the first of its kind to evaluate an investigational medication designed specifically to treat Cyclic Vomiting Syndrome',
           images: [
             {
-              url: 'https://www.example.ie/og-image-01.jpg',
+              url: `${process.env.URL}/img/hero-card.jpg`,
               width: 800,
               height: 600,
               alt: 'Og Image Alt',
