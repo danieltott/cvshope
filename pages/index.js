@@ -13,6 +13,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useRef } from 'react'
 import { NextSeo } from 'next-seo'
+import TravelSupport from '@components/TravelSupport'
 
 export default function Home() {
   const router = useRouter()
@@ -53,6 +54,8 @@ export default function Home() {
         <AboutStudy />
 
         <WhoCanJoin />
+
+        <TravelSupport theme="light" />
 
         <Wrap theme="blue">
           <div className="text-center">
