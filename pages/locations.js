@@ -52,6 +52,16 @@ export default function Locations({
             To learn more about the CVS Hope clinical trial, contact one of the
             locations listed below:
           </p>
+          <p className="mt-3 text-lg text-gray-500 sm:text-xl md:mt-5">
+            <strong>
+              Travel support is available for people who do not live near a
+              study site.
+            </strong>{' '}
+            <Link href="/#TravelSupport">
+              <a className="text-indigo-600">See how Travel Support works</a>
+            </Link>
+            .
+          </p>
         </div>
 
         <div id="map" className="pt-24">
