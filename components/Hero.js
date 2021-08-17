@@ -41,6 +41,14 @@ export default function Hero() {
               </a>
             </div>
           </div>
+          <p className="mt-10 max-w-md mx-auto text-gray-500 md:max-w-3xl">
+            Travel support is available for people who do not live near a study
+            site.{' '}
+            <Link href="#TravelSupport">
+              <a className="text-indigo-600">See how Travel Support works</a>
+            </Link>
+            .
+          </p>
         </div>
       </div>
       <div className="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">

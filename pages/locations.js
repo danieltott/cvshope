@@ -8,6 +8,7 @@ import LocationsMap from '@components/LocationsMap'
 import zipCodeDict from '../data/zipcode-dict.json'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { NextSeo } from 'next-seo'
+import { locationCount } from 'data/data'
 
 export default function Locations({
   states,
@@ -19,13 +20,12 @@ export default function Locations({
     <>
       <NextSeo
         title="CVS Hope Clinical Trial Locations"
-        description="The CVS Hope Trial is being conducted at approximately 15 study sites in the US."
+        description={`The CVS Hope Trial is being conducted at approximately ${locationCount} study sites in the US.`}
         canonical={`${process.env.NEXT_PUBLIC_IMG_URL}/locations`}
         openGraph={{
           url: `${process.env.NEXT_PUBLIC_IMG_URL}/locations`,
           title: 'CVS Hope Clinical Trial Locations',
-          description:
-            'The CVS Hope Trial is being conducted at approximately 15 study sites in the US.',
+          description: `The CVS Hope Trial is being conducted at approximately ${locationCount} study sites in the US.`,
         }}
       />
       <div className="relative">
@@ -45,12 +45,22 @@ export default function Locations({
           </h1>
 
           <p className="mt-3 text-lg text-gray-500 sm:text-xl md:mt-5">
-            The CVS Hope Trial is being conducted at approximately 15 study
-            sites in the US.
+            The CVS Hope Trial is being conducted at approximately{' '}
+            {locationCount} study sites in the US.
           </p>
           <p className="mt-3 text-lg text-gray-500 sm:text-xl md:mt-5">
             To learn more about the CVS Hope clinical trial, contact one of the
             locations listed below:
+          </p>
+          <p className="mt-3 text-lg text-gray-500 sm:text-xl md:mt-5">
+            <strong>
+              Travel support is available for people who do not live near a
+              study site.
+            </strong>{' '}
+            <Link href="/#TravelSupport">
+              <a className="text-indigo-600">See how Travel Support works</a>
+            </Link>
+            .
           </p>
         </div>
 

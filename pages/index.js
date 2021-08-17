@@ -13,6 +13,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useRef } from 'react'
 import { NextSeo } from 'next-seo'
+import TravelSupport from '@components/TravelSupport'
+import { locationCount } from 'data/data'
 
 export default function Home() {
   const router = useRouter()
@@ -54,6 +56,8 @@ export default function Home() {
 
         <WhoCanJoin />
 
+        <TravelSupport theme="light" />
+
         <Wrap theme="blue">
           <div className="text-center">
             <h2
@@ -63,8 +67,8 @@ export default function Home() {
               <span className="block">Ready to Participate in the Trial?</span>
             </h2>
             <p className="mt-4 text-lg leading-6 text-indigo-200">
-              The CVS Hope Trial is being conducted at approximately 15 study
-              sites in the US.
+              The CVS Hope Trial is being conducted at approximately{' '}
+              {locationCount} study sites in the US.
             </p>
             <Link href="/locations#top">
               <a className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto">

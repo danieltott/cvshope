@@ -10,6 +10,7 @@ import {
   StatusOnlineIcon,
   SparklesIcon,
   ClipboardListIcon,
+  MapIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
@@ -48,6 +49,13 @@ const features = [
     href: 'WhoCanJoin',
     description: 'See if you could be a good fit for the study.',
     icon: UserGroupIcon,
+  },
+  {
+    name: 'What if there are no study sites near me?',
+    href: 'TravelSupport',
+    description:
+      'Travel support is available for people who do not live near a study site.',
+    icon: MapIcon,
   },
 ]
 
