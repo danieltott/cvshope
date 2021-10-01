@@ -18,6 +18,13 @@ export default function Locations({
 }) {
   return (
     <>
+      <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `gtag('event', 'conversion', {'send_to': 'AW-10782071893/6uN8CIqRn_gCENW4pZUo'});`,
+          }}
+        />
+      </Head>
       <NextSeo
         title="CVS Hope Clinical Trial Locations"
         description={`The CVS Hope Trial is being conducted at approximately ${locationCount} study sites in the US.`}
