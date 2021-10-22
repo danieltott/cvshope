@@ -15,6 +15,7 @@ import { useEffect, useRef } from 'react'
 import { NextSeo } from 'next-seo'
 import TravelSupport from '@components/TravelSupport'
 import { locationCount } from 'data/data'
+import useRedditAd from '@components/useRedditAd'
 
 export default function Home() {
   const router = useRouter()
@@ -28,6 +29,9 @@ export default function Home() {
     // }
     contentRef.current.focus()
   }, [router?.asPath])
+
+  useRedditAd()
+
   return (
     <>
       <NextSeo

@@ -10,6 +10,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import { NextSeo } from 'next-seo'
 import { locationCount } from 'data/data'
 import { useEffect } from 'react'
+import useRedditAd from '@components/useRedditAd'
 
 export default function Locations({
   states,
@@ -22,6 +23,9 @@ export default function Locations({
       send_to: 'AW-10782071893/6uN8CIqRn_gCENW4pZUo',
     })
   }, [])
+
+  useRedditAd()
+
   return (
     <>
       <NextSeo
