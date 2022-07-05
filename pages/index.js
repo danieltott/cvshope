@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Hero from '@components/Hero'
 import Wrap from '@components/Wrap'
 import AboutCVS from '@components/AboutCVS'
@@ -9,26 +8,22 @@ import Header from '@components/Header'
 import WhoCanJoin from '@components/WhoCanJoin'
 import AboutStudy from '@components/AboutStudy'
 import Footer from '@components/Footer'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useEffect, useRef } from 'react'
 import { NextSeo } from 'next-seo'
 import TravelSupport from '@components/TravelSupport'
-import { locationCount } from 'data/data'
 import useRedditAd from '@components/useRedditAd'
 
 export default function Home() {
-  const router = useRouter()
-  const contentRef = useRef()
-  useEffect(() => {
-    // const sectionID = router?.asPath.split('#')[1]
-    // const section = document.getElementById(sectionID)
-    // console.log({ sectionID, section })
-    // if (section) {
-    //   section.focus()
-    // }
-    contentRef.current.focus()
-  }, [router?.asPath])
+  // const router = useRouter()
+  // const contentRef = useRef()
+  // useEffect(() => {
+  //   // const sectionID = router?.asPath.split('#')[1]
+  //   // const section = document.getElementById(sectionID)
+  //   // console.log({ sectionID, section })
+  //   // if (section) {
+  //   //   section.focus()
+  //   // }
+  //   contentRef.current.focus()
+  // }, [router?.asPath])
 
   useRedditAd()
 
@@ -62,7 +57,8 @@ export default function Home() {
 
         <TravelSupport theme="light" />
 
-        <Wrap theme="blue">
+        <div className="h-4 bg-gradient-to-r from-purple-800 to-indigo-700" />
+        {/* <Wrap theme="blue">
           <div className="text-center">
             <h2
               className="text-3xl font-extrabold text-white sm:text-4xl"
@@ -80,7 +76,7 @@ export default function Home() {
               </a>
             </Link>
           </div>
-        </Wrap>
+        </Wrap> */}
 
         <Wrap>
           <h2 className="subhead mt-2 text-gray-900">Who is Alexza</h2>
